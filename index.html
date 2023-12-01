@@ -752,7 +752,23 @@ h4 {
               <h4>- W. BUFFET</h4>
           </div>
       </div><br>
-        
+
+    <script>
+                const progressSections = document.querySelectorAll('.progress-table');
+            
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      entry.target.style.opacity = 1;
+                      entry.target.style.transform = 'translateY(0)';
+                    }
+                  });
+                });
+            
+                progressSections.forEach(section => {
+                  observer.observe(section);
+                });
+              </script>
 </body>
 
 <footer>
@@ -771,20 +787,4 @@ h4 {
     </div>
  
 </footer>
- <script>
-                const progressSections = document.querySelectorAll('.progress-table');
-            
-                const observer = new IntersectionObserver(entries => {
-                  entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                      entry.target.style.opacity = 1;
-                      entry.target.style.transform = 'translateY(0)';
-                    }
-                  });
-                });
-            
-                progressSections.forEach(section => {
-                  observer.observe(section);
-                });
-              </script>
 </html>
