@@ -715,26 +715,6 @@ h4 {
 
                 <!-- Add more progress tables as needed -->
               </div>
-            
-              <script>
-                const progressSections = document.querySelectorAll('.progress-table');
-            
-                const observer = new IntersectionObserver(entries => {
-                  entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                      entry.target.style.opacity = 1;
-                      entry.target.style.transform = 'translateY(0)';
-                    }
-                  });
-                });
-            
-                progressSections.forEach(section => {
-                  observer.observe(section);
-                });
-              </script>
-             
-
-        
         </div>
         </div>
     <div class="w3-container w3-padding-32"><br>
@@ -791,5 +771,20 @@ h4 {
     </div>
  
 </footer>
-
+ <script>
+                const progressSections = document.querySelectorAll('.progress-table');
+            
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      entry.target.style.opacity = 1;
+                      entry.target.style.transform = 'translateY(0)';
+                    }
+                  });
+                });
+            
+                progressSections.forEach(section => {
+                  observer.observe(section);
+                });
+              </script>
 </html>
